@@ -30,12 +30,33 @@
                   <section class="contact">
                     <h1>Contact Me</h1>
                     <p>Feel free to reach out using the form below.</p>
-                    <form action="https://formspree.io/f/mrbldknz" method="post" class="contact-form">
+                    <!-- <form action="https://formspree.io/f/mrbldknz" method="post" class="contact-form"> -->
+                    <form id="contactForm">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="Email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea> 
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                            e.preventDefault();
+                            
+                            const formData = {
+                                name: this.name.value,
+                                email: this.email.value,
+                                message: this.message.value    
+                        };
+
+                        const res = await fetch('http://localhost:5500/contact', {
+                            method: 'POST',
+                            headers: { 'Content=Type': 'application/json'},
+                            body: Json.stringify(formData)
+                        });
+
+                        const data = await res.json();
+                    });
+                    </script>
 
                   </section>
                  
