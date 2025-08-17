@@ -10,11 +10,14 @@ app.use(express.json());
 
 //CORS for frontend only
 app.use(cors({
-    origin: [process.env.FRONTEND_URL, "http://localhost:5500"],
-    methods: ['POST'],
+    origin: [
+        "http://127.0.0.1:5500", 
+        "http://localhost:5500",
+        "https://my-backend-portfolio-web.onrender.com/"
+    ],
+    methods: ['GET','POST'],
     allowedHeaders: ['Content-Type']
 }));
-
 
 //API endpoint
 app.post('/contact', async (req, res) => {

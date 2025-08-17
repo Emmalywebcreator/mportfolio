@@ -25,28 +25,28 @@ document.addEventListener('click', (e) => {
     }
 });
 
-const form = document.querySelector('.contact-form');
+// const form = document.querySelector('.contact-form');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
+// form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const formData = new FormData(form);
 
-    const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    });
-    if (res.ok) {
-        alert("Thank you! Your message has been sent.");
-        form.reset();
-    } else {
-        alert("Oops! Something went wrong.");
-    }
-});
+//     const res = await fetch(form.action, {
+//         method: 'POST',
+//         body: formData,
+//         headers: {
+//             'Accept': 'application/json'
+//         }
+//     });
+//     if (res.ok) {
+//         alert("Thank you! Your message has been sent.");
+//         form.reset();
+//     } else {
+//         alert("Oops! Something went wrong.");
+//     }
+// });
 
-document.getElementById('contactForm').addEventListener('Submit', async function(e) {
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
     try {
