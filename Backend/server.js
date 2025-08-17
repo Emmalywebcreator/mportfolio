@@ -53,6 +53,11 @@ try {
 }
 })
 
+app.get('/', (req, res) => {
+  res.send('Backend is running 🚀');
+});
+
+
 //Deployment: use dynamic port
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {

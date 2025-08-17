@@ -50,7 +50,7 @@ document.getElementById('contactForm').addEventListener('Submit', async function
     e.preventDefault();
 
     try {
-        const res = await fetch('https://your-backend-service.onrender.com/contact', {
+        const res = await fetch('https://my-backend-portfolio-web.onrender.com/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({
