@@ -56,7 +56,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
             body: JSON.stringify({
                 name: this.name.value,
                 email: this.email.value,
-                message: this.message.value,
                 message: this.message.value
             })
         });

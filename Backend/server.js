@@ -11,9 +11,7 @@ app.use(express.json());
 //CORS for frontend only
 app.use(cors({
     origin: [
-        "http://127.0.0.1:5500", 
-        "http://localhost:5500",
-        "https://my-backend-portfolio-web.onrender.com/"
+        "http://127.0.0.1:5500", "http://localhost:5500"
     ],
     methods: ['GET','POST'],
     allowedHeaders: ['Content-Type']
@@ -52,8 +50,8 @@ try {
     res.json({ success: true, message: 'Message sent successfully!' });
 
 } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Something went wrong' });
+  console.error("Email send error:", error);
+  res.status(500).json({ error: error.message });
 }
 })
 
