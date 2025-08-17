@@ -10,10 +10,11 @@ app.use(express.json());
 
 //CORS for frontend only
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: [process.env.FRONTEND_URL, "http://localhost:5500"],
     methods: ['POST'],
     allowedHeaders: ['Content-Type']
 }));
+
 
 //API endpoint
 app.post('/contact', async (req, res) => {
