@@ -45,3 +45,30 @@ form.addEventListener('submit', async (e) => {
         alert("Oops! Something went wrong.");
     }
 });
+
+document.getElementById('contactForm').addEventListener('Submit', async function(e) {
+    e.preventDefault();
+
+    try {
+        const res = await fetch('https://your-backend-service.onrender.com/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                name: this.name.value,
+                email: this.email.value,
+                message: this.message.value,
+                message: this.message.value
+            })
+        });
+
+        const data = await res.json();
+        alert(data.message || data.error);
+
+        if (data.success) {
+            this.reset(); //clear form if success
+        }
+    } catch (err) {
+        alert("Failed to send message. Please try again later.");
+        console.error(err);
+    }
+})
