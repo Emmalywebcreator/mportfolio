@@ -229,3 +229,53 @@ footer {
 .contact-form button:hover {
     background: #e68900;
 }
+
+#projects {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card a:hover {
+  background: #0056b3;
+}
