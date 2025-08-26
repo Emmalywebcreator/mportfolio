@@ -239,6 +239,8 @@ footer {
 
 .projects-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
     margin-bottom: 32px;
@@ -252,7 +254,7 @@ footer {
     padding: 24px;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
