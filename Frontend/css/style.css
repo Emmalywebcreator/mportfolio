@@ -252,7 +252,7 @@ footer {
     padding: 24px;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
