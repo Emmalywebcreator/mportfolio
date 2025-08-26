@@ -256,6 +256,12 @@ footer {
     align-items: center;
 }
 
+.project-card .project-links {
+    display: flex;
+    gap: 16px; /* Space between links */
+    margin-top: 12px;
+}
+
 .project-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 8px 32px rgba(0,0,0,0.15);
@@ -284,7 +290,7 @@ footer {
 .project-card a {
     display: inline-block;
     margin: 5px 8px;
-    padding: 8px 16px;
+    padding: 0;
     border-radius: 8px;
     background: #4f8cff;
     color: #fff;
