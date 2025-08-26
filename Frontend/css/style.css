@@ -291,7 +291,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     transition: background 0.2s;
-    gap: 8px;
+    gap: 30px;
 }
 
 .project-card a:hover {
