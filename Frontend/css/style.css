@@ -283,7 +283,7 @@ footer {
 
 .project-card a {
     display: inline-block;
-    margin: 0 8px;
+    margin: 5px 8px;
     padding: 8px 16px;
     border-radius: 8px;
     background: #4f8cff;
@@ -291,7 +291,6 @@ footer {
     text-decoration: none;
     font-weight: 500;
     transition: background 0.2s;
-    gap: 30px;
 }
 
 .project-card a:hover {
