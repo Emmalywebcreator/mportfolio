@@ -237,6 +237,18 @@ footer {
     text-align: center;
 }
 
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #4f8cff 0%, #ff9800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .projects-container {
     display: flex;
     flex-direction: row;
@@ -292,7 +304,7 @@ footer {
 .project-card a {
     display: inline-block;
     margin: 5px 8px;
-    padding: 0;
+    padding: 10px 16px;
     border-radius: 8px;
     background: #4f8cff;
     color: #fff;
@@ -302,5 +314,5 @@ footer {
 }
 
 .project-card a:hover {
-    background: #2563eb;
+    background: #092561;
 }
